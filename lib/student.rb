@@ -16,7 +16,7 @@ class Student
     sql = <<-SQL
       SELECT id FROM students ORDER BY id DESC LIMIT 1
     SQL
-    @id = DB[:conn].execute(sql).tr()
+    @id = DB[:conn].execute(sql).tr('[]')
   end
   
   def self.create_table()
