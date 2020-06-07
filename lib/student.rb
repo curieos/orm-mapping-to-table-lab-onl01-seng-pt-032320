@@ -11,6 +11,6 @@ class Student
     sql = <<-SQL
       
       SQL
-    DB[:con].execute()
+    DB[:con].execute(sql)
   end
 end
