@@ -9,7 +9,7 @@ class Student
   
   def self.create_table()
     sql = <<-SQL
-      
+        
       SQL
     DB[:con].execute(sql)
   end
