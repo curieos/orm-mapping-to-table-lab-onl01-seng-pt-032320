@@ -14,7 +14,7 @@ class Student
     SQL
     DB[:conn].execute(sql)
     sql = <<-SQL
-      SELECT id FROM students 
+      SELECT id FROM students ORDER BY id DESC LIMIT 1
     SQL
     @id = DB[:conn].execute(sql)
   end
