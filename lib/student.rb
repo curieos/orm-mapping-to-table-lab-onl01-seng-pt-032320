@@ -8,6 +8,10 @@ class Student
   end
   
   def save()
+    sql = <<-SQL
+      
+    SQL
+    DB[:conn].execute(sql)
     
   end
   
@@ -18,14 +22,14 @@ class Student
         name TEXT, 
         grade INTEGER  
       );
-      SQL
+    SQL
     DB[:conn].execute(sql)
   end
   
   def self.drop_table()
     sql = <<-SQL
-        DROP TABLE IF EXISTS students;
-      SQL
+      DROP TABLE IF EXISTS students;
+    SQL
     DB[:conn].execute(sql)
   end
 end
